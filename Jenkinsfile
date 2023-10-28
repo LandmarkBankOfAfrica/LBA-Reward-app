@@ -1,6 +1,12 @@
 pipeline {
     
 	agent any
+
+    tools {
+        maven "Maven3.9.5"
+        jdk  "OracleJDK"
+
+    }
 /*	
 	tools {
         maven "maven3"
@@ -9,9 +15,9 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.40.209:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
+        NEXUS_URL = "172.31.41.24:8081"
+        NEXUS_REPOSITORY = "LBA-release"
+	    NEXUS_REPOGRP_ID    = "maven-public"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
@@ -20,9 +26,12 @@ pipeline {
         
         stage('BUILD'){
             steps {
-                sh 'mvn clean install -DskipTests'
+                sh 'mvn -s settings.xml -DskipTests install'
             }
-            post {
+        }
+    }
+}
+ /*           post {
                 success {
                     echo 'Now Archiving...'
                     archiveArtifacts artifacts: '**/target/*.war'
@@ -119,3 +128,5 @@ pipeline {
 
 
 }
+
+*/
