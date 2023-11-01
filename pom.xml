@@ -163,8 +163,8 @@
     </build>
 	<repositories>
     <repository>
-      <id>${NEXUS-GRP-REPO}</id>
-      <url>http://${NEXUSIP}:${NEXUSPORT}/repository/${NEXUS-GRP-REPO}/</url>
+      <id>${LBA-Group}</id>
+      <url>http://35.93.152.230:8081/repository/LBA-Group/</url>
     </repository>
   </repositories>
 </project>
