@@ -15,7 +15,8 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.41.24:8081"
+        NEXUSIP = "172.31.41.24"
+        NEXUSPORT = "8081"
         NEXUS_REPOSITORY = "LBA-release"
 	    NEXUS_REPOGRP_ID    = "maven-public"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
