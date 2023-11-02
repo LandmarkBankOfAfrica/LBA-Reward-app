@@ -13,14 +13,16 @@ pipeline {
     }
 */	
     environment {
-        NEXUS_VERSION = "nexus3"
-        NEXUS_PROTOCOL = "http"
-        NEXUSIP = "172.31.41.24"
-        NEXUSPORT = "8081"
-        NEXUS_REPOSITORY = "LBA-release"
-	    NEXUS_REPOGRP_ID    = "maven-public"
-        NEXUS_CREDENTIAL_ID = "nexuslogin"
-        ARTVERSION = "${env.BUILD_ID}"
+        SNAP_REPO = 'LBA-Snapshot'
+        NEXUS_USER = 'admin'
+        NEXUS_PASS = 'admin123'
+        RELEASE_REPO = 'LBA-release'
+        CENTRAL_REPO = 'LBA-Central'
+        NEXUSIP = '172.31.18.181'
+        NEXUSPORT = '8081'
+	    NEXUS_GRP_REPO = 'LBA-Group'
+        NEXUS_LOGIN = "nexuslogin"
+        
     }
 	
     stages{
