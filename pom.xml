@@ -164,7 +164,7 @@
 	<repositories>
     <repository>
       <id>${LBA-Group}</id>
-      <url>http://35.93.152.230:8081/repository/LBA-Group/</url>
+      <url>http:/54.191.234.215:8081/repository/LBA-Group/</url>
     </repository>
   </repositories>
 </project>
